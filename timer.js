@@ -100,16 +100,18 @@
     update();
   }
 
+  function start() {
+    if (interval) return;
+    interval = setInterval(tick, 1000);
+  }
+
   select.addEventListener('change', () => {
     duration = parseInt(select.value, 10);
     remaining = duration;
     update();
   });
 
-  startBtn.addEventListener('click', () => {
-    if (interval) return;
-    interval = setInterval(tick, 1000);
-  });
+  startBtn.addEventListener('click', start);
 
   stopBtn.addEventListener('click', () => {
     if (interval) {
@@ -123,6 +125,7 @@
     interval = null;
     remaining = duration;
     update();
+    start();
   });
 
   update();
