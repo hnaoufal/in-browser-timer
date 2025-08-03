@@ -1,6 +1,6 @@
 # In-Browser Timer Extension
 
-A simple browser extension that injects a configurable timer at the top of every page. You can pick between 1, 2, 3 or 5 minutes, start/stop/reset the countdown and the timer changes color from green to yellow to red as time runs out. When the timer expires it keeps counting negatively and displays the message `please come to an end`.
+A lightweight extension that overlays a configurable countdown timer at the top of every page to help you stay on track. Choose between 1, 2, 3 or 5 minutes, start/stop/reset the countdown, and watch the timer shift from green to yellow to red as time runs out. When the timer expires it keeps counting negatively and displays the message `Time's up! Let's wrap things up.`
 
 ## Installation (Chromium browsers)
 
@@ -18,6 +18,6 @@ A simple browser extension that injects a configurable timer at the top of every
   - Green: 50–100%
   - Yellow: 20–50%
   - Red: 0–20% (and when over time)
-- After the countdown passes zero it goes negative and displays *please come to an end*.
+- After the countdown passes zero it goes negative and displays *Time's up! Let's wrap things up.*
 
 The extension does not require any special permissions and runs as a content script on all pages.

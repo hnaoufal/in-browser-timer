@@ -87,7 +87,7 @@
   function update() {
     display.textContent = format(remaining);
     if (remaining < 0) {
-      message.textContent = 'please come to an end';
+      message.textContent = "Time's up! Let's wrap things up.";
     } else {
       message.textContent = '';
     }
