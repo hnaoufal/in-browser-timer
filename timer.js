@@ -4,6 +4,7 @@
 
   const container = document.createElement('div');
   container.id = 'in-browser-timer';
+  container.style.display = 'none'; // hidden by default
 
   // timer display
   const display = document.createElement('div');
@@ -48,9 +49,9 @@
   let remaining = duration;
   let interval = null;
 
-  chrome.storage?.local.get({ timerVisible: true }, (data) => {
-    if (!data.timerVisible) {
-      container.style.display = 'none';
+  chrome.storage?.local.get({ timerVisible: false }, (data) => {
+    if (data.timerVisible) {
+      container.style.display = '';
     }
   });
 
