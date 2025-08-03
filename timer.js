@@ -105,6 +105,14 @@
     interval = setInterval(tick, 1000);
   }
 
+  function resetTimer() {
+    clearInterval(interval);
+    interval = null;
+    remaining = duration;
+    update();
+    start();
+  }
+
   select.addEventListener('change', () => {
     duration = parseInt(select.value, 10);
     remaining = duration;
@@ -120,12 +128,12 @@
     }
   });
 
-  resetBtn.addEventListener('click', () => {
-    clearInterval(interval);
-    interval = null;
-    remaining = duration;
-    update();
-    start();
+  resetBtn.addEventListener('click', resetTimer);
+
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('#js-work-quickfilters dd a#js-work-quickfilters-trigger')) {
+      resetTimer();
+    }
   });
 
   update();
