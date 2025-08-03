@@ -12,6 +12,7 @@ A lightweight extension that overlays a configurable countdown timer at the top 
 
 ## Usage
 
+- Open the extension popup and click **Show Timer** to display the timer (hidden by default).
 - Pick a duration from the dropdown and press **Start**.
 - **Stop** pauses the timer, **Reset** returns to the chosen duration.
 - The background color indicates remaining time:
