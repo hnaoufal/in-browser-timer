@@ -42,11 +42,29 @@
   container.appendChild(display);
   container.appendChild(controls);
   container.appendChild(message);
-  document.body.appendChild(container);
+  document.body.insertBefore(container, document.body.firstChild);
 
   let duration = parseInt(select.value, 10);
   let remaining = duration;
   let interval = null;
+
+  chrome.storage?.local.get({ timerVisible: true }, (data) => {
+    if (!data.timerVisible) {
+      container.style.display = 'none';
+    }
+  });
+
+  chrome.runtime?.onMessage.addListener((msg) => {
+    if (msg.action === 'hideTimer') {
+      container.style.display = 'none';
+      if (interval) {
+        clearInterval(interval);
+        interval = null;
+      }
+    } else if (msg.action === 'showTimer') {
+      container.style.display = '';
+    }
+  });
 
   function format(sec) {
     const s = Math.abs(sec);
