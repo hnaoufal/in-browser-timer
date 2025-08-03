@@ -1,0 +1,48 @@
+#in-browser-timer {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2ecc71;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  font-family: sans-serif;
+  z-index: 2147483647;
+  text-align: center;
+}
+
+#in-browser-timer .ibt-display {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+#in-browser-timer .ibt-controls {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+#in-browser-timer select,
+#in-browser-timer button {
+  padding: 3px 6px;
+  border: none;
+  border-radius: 4px;
+}
+
+#in-browser-timer button {
+  cursor: pointer;
+  background-color: #34495e;
+  color: #fff;
+}
+
+#in-browser-timer button:hover {
+  opacity: 0.85;
+}
+
+#in-browser-timer .ibt-message {
+  font-size: 0.9em;
+  font-weight: bold;
+}

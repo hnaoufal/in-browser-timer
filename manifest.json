@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "In-Browser Timer",
+  "version": "1.0",
+  "description": "Adds a configurable timer overlay to every page.",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["timer.js"],
+      "css": ["timer.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
