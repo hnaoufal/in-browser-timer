@@ -130,7 +130,7 @@
 
   resetBtn.addEventListener('click', resetTimer);
 
-  // doucment listen to key event x and reset timer
+  // document listens for key event 'j' and resets timer
   document.addEventListener('keydown', (e) => {
     if (e.key === 'j') {
       resetTimer();
