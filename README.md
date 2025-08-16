@@ -8,7 +8,7 @@ A lightweight extension that overlays a configurable countdown timer at the top 
 2. Open `chrome://extensions` in the browser.
 3. Enable **Developer mode**. (In the top right... it is mostly hidden)
 4. Click **Load unpacked** and select the folder of this project.
-5. Navigate to any page to see the timer.
+5. Navigate to any page and use the extension popup to show the timer.
 
 ## Usage
 
@@ -21,7 +21,7 @@ A lightweight extension that overlays a configurable countdown timer at the top 
   - Red: 0–20% (and when over time)
 - After the countdown passes zero it goes negative and displays *Time's up! Let's wrap things up.*
 
-The extension does not require any special permissions and runs as a content script on all pages.
+The extension only requests the `activeTab` permission and injects its code on the current page after user interaction.
 
 ## Privacy Policy
 This extension does not collect, store, or transmit any personal data. All settings (such as timer duration or visibility) are stored only locally in the browser and never leave the device.

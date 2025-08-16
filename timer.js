@@ -130,8 +130,9 @@
 
   resetBtn.addEventListener('click', resetTimer);
 
-  document.addEventListener('click', (e) => {
-    if (e.target.closest('#js-work-quickfilters dd a#js-work-quickfilters-trigger')) {
+  // document listens for key event 'j' and resets timer
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'j') {
       resetTimer();
     }
   });
