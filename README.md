@@ -22,3 +22,6 @@ A lightweight extension that overlays a configurable countdown timer at the top 
 - After the countdown passes zero it goes negative and displays *Time's up! Let's wrap things up.*
 
 The extension does not require any special permissions and runs as a content script on all pages.
+
+## Privacy Policy
+This extension does not collect, store, or transmit any personal data. All settings (such as timer duration or visibility) are stored only locally in the browser and never leave the device.
